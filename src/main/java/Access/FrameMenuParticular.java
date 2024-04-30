@@ -47,11 +47,11 @@ public class FrameMenuParticular extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        CerrarSesion = new javax.swing.JMenuItem();
+        Quit = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        ConsultarReservas = new javax.swing.JMenuItem();
+        CambiarDatos = new javax.swing.JMenuItem();
 
         menu1.setLabel("File");
         menuBar1.add(menu1);
@@ -129,26 +129,41 @@ public class FrameMenuParticular extends javax.swing.JFrame {
 
         jMenu2.setText("Inicio");
 
-        jMenuItem2.setText("Cerrar sesión");
-        jMenu2.add(jMenuItem2);
+        CerrarSesion.setText("Cerrar sesión");
+        CerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarSesionActionPerformed(evt);
+            }
+        });
+        jMenu2.add(CerrarSesion);
 
-        jMenuItem4.setText("Salir");
-        jMenu2.add(jMenuItem4);
+        Quit.setText("Salir");
+        Quit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Quit);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Herramientas");
 
-        jMenuItem3.setText("Consultar Reservas");
-        jMenu3.add(jMenuItem3);
-
-        jMenuItem5.setText("Cambiar Datos");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        ConsultarReservas.setText("Consultar Reservas");
+        ConsultarReservas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                ConsultarReservasActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem5);
+        jMenu3.add(ConsultarReservas);
+
+        CambiarDatos.setText("Cambiar Datos");
+        CambiarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CambiarDatosActionPerformed(evt);
+            }
+        });
+        jMenu3.add(CambiarDatos);
 
         jMenuBar1.add(jMenu3);
 
@@ -168,9 +183,25 @@ public class FrameMenuParticular extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void CambiarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarDatosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_CambiarDatosActionPerformed
+
+    private void QuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_QuitActionPerformed
+
+    private void CerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarSesionActionPerformed
+        // TODO add your handling code here:
+        FrameInicio inicio = new FrameInicio();
+        inicio.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_CerrarSesionActionPerformed
+
+    private void ConsultarReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarReservasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConsultarReservasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,6 +239,10 @@ public class FrameMenuParticular extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem CambiarDatos;
+    private javax.swing.JMenuItem CerrarSesion;
+    private javax.swing.JMenuItem ConsultarReservas;
+    private javax.swing.JMenuItem Quit;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JFrame jFrame1;
@@ -220,10 +255,6 @@ public class FrameMenuParticular extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private java.awt.Menu menu1;

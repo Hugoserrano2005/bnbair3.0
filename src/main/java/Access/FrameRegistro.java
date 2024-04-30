@@ -70,14 +70,15 @@ public class FrameRegistro extends javax.swing.JFrame {
             JTextField campo = camposDeTexto.get(nombresVariables[i]);
             final String mensajeOriginal = mensajesOriginales[i];
 
-            campo.addFocusListener(new FocusAdapter() {
+            campo.addMouseListener(new MouseAdapter() {
                 @Override
-                public void focusGained(FocusEvent e) {
+                public void mouseClicked(MouseEvent e) {
                     if (campo.getText().equals(mensajeOriginal)) {
                         campo.setText("");
                     }
                 }
-
+            });
+            campo.addFocusListener(new FocusAdapter() {
                 @Override
                 public void focusLost(FocusEvent e) {
                     if (campo.getText().isEmpty()) {

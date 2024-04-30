@@ -70,10 +70,15 @@ public class FrameMenuAnfitrion extends javax.swing.JFrame {
 
         jMenu1.setText("Inicio");
 
-        jMenuItem5.setText("jMenuItem5");
+        jMenuItem5.setText("Cerrar Sesión");
         jMenu1.add(jMenuItem5);
 
-        jMenuItem6.setText("jMenuItem6");
+        jMenuItem6.setText("Salir");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem6);
 
         jMenuBar1.add(jMenu1);
@@ -109,6 +114,10 @@ public class FrameMenuAnfitrion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments

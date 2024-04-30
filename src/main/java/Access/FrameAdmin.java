@@ -179,6 +179,8 @@ public class FrameAdmin extends javax.swing.JFrame {
 
         quitmenu.setText("Salir");
 
+        ImageIcon cSesion = new ImageIcon("src/main/java/com/images/Puerta.png");
+        CerrarSesion.setIcon(cSesion);
         CerrarSesion.setText("Cerrar Sesión");
         CerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +189,8 @@ public class FrameAdmin extends javax.swing.JFrame {
         });
         quitmenu.add(CerrarSesion);
 
+        ImageIcon apagar = new ImageIcon("src/main/java/com/images/shootDown.png");
+        Quit.setIcon(apagar);
         Quit.setText("Cerrar App");
         Quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

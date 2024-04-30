@@ -87,6 +87,16 @@ public class FrameRegistro extends javax.swing.JFrame {
                     }
                 }
             });
+            campo.addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyTyped(KeyEvent e) {
+                    if (e.getKeyCode() == KeyEvent.VK_TAB) {
+                        if (campo.getText().equals(mensajeOriginal)) {
+                            campo.setText("");
+                        }
+                    }
+                }
+            });
         }
     }
 
